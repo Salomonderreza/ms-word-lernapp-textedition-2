@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Redaktions-Profi – Rückgängig, Zwischenablage &amp; Kombi-Aufgaben</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <aside class="missionpanel">
+    <div class="app-title">Redaktions-Profi</div>
+    <div class="brand">
+      <span class="brand-num" id="brandNum">B</span>
+      <span class="brand-name" id="familyLabel">Rückgängig, Zwischenablage &amp; Abschluss</span>
+    </div>
+
+    <div class="progress">
+      <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+      <span class="progress-label" id="progressLabel">Mission 28 / 44</span>
+    </div>
+
+    <div id="panelBody"><!-- Erklärung / Demo / Aufgabe – wird von engine.js gerendert --></div>
+  </aside>
+
+  <main class="wordwindow">
+    <div class="titlebar">
+      <span class="titlebar-dot"></span>
+      <span class="titlebar-name" id="docName">Übungsdokument.docx</span>
+    </div>
+
+    <div class="pagewrap">
+      <div class="page" id="page">
+        <div class="editor" id="editor" contenteditable="false" spellcheck="false"></div>
+      </div>
+    </div>
+
+    <div class="paste-fallback" id="pasteFallback" hidden>
+      <button type="button" class="btn btn-ghost" id="btnPasteFallback">📥 Einfügen (falls Strg+V nicht funktioniert)</button>
+    </div>
+
+    <div class="keyboarddock" id="keyboardDock" hidden>
+      <div class="keyboarddock-label">Diese Tasten brauchst du:</div>
+      <div id="keyboardSvgHost"></div>
+    </div>
+  </main>
+</div>
+
+<script src="engine.js"></script>
+<script src="missionen.js"></script>
+</body>
+</html>
